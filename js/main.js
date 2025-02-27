@@ -6,10 +6,23 @@ document.getElementById('noakhali-btn').addEventListener('click', function (even
     const mainBalance = document.getElementById('balance').innerText;
     const convertedBalance = parseFloat(mainBalance);
 
+    const noakhaliAmount = document.getElementById('noakhali-amount').innerText;
+    const convertedDonates = parseFloat(noakhaliAmount);
+
+
+
+    const modal = document.querySelector('.modal');
+
     if (convertedInput > 0) {
-        const donateMoney = convertedInput + convertedBalance;
+
+        const donateMoney = convertedBalance - convertedInput;
         document.getElementById('balance').innerText = donateMoney;
-        alert(`You Donated : ${convertedInput} BDT`)
+
+        const noakhaliDonate = convertedDonates + convertedInput;
+        document.getElementById('noakhali-amount').innerText = noakhaliDonate;
+        document.getElementById('modal-amount').innerText = convertedInput;
+        modal.showModal();
+
     }
     else {
         alert('Please Provide Valid Money')
@@ -26,11 +39,19 @@ document.getElementById('feni-btn').addEventListener('click', function (event) {
     const convertedInput = parseFloat(feniInput);
     const mainBalance = document.getElementById('balance').innerText;
     const convertedBalance = parseFloat(mainBalance);
+    const modal = document.querySelector('.modal');
+
+    const feniAmount = document.getElementById('feni-amount').innerText;
+    const convertedDonates = parseFloat(feniAmount);
 
     if (convertedInput > 0) {
-        const donateMoney = convertedInput + convertedBalance;
+        const donateMoney = convertedBalance - convertedInput;
         document.getElementById('balance').innerText = donateMoney;
-        alert(`You Donated : ${convertedInput} BDT`)
+        const feniDonate = convertedDonates + convertedInput;
+        document.getElementById('feni-amount').innerText = feniDonate;
+        document.getElementById('modal-amount').innerText = convertedInput;
+
+        modal.showModal();
     }
     else {
         alert('Please Provide Valid Money')
@@ -40,6 +61,7 @@ document.getElementById('feni-btn').addEventListener('click', function (event) {
 })
 // Donated for Aid for Injured in the Quota Movement , Bangladesh
 
+
 document.getElementById('quota-btn').addEventListener('click', function (event) {
     event.preventDefault()
     const quotaInput = document.getElementById('quota-input').value;
@@ -47,14 +69,26 @@ document.getElementById('quota-btn').addEventListener('click', function (event) 
     const mainBalance = document.getElementById('balance').innerText;
     const convertedBalance = parseFloat(mainBalance);
 
+    const quotaAmount = document.getElementById('quota-amount').innerText;
+    const convertedDonates = parseFloat(quotaAmount);
+
+    const modal = document.querySelector('.modal');
+
     if (convertedInput > 0) {
-        const donateMoney = convertedInput + convertedBalance;
+        const donateMoney = convertedBalance - convertedInput;
         document.getElementById('balance').innerText = donateMoney;
-        alert(`You Donated : ${convertedInput} BDT`)
+        const quotaDonate = convertedDonates + convertedInput;
+        document.getElementById('quota-amount').innerText = quotaDonate;
+        document.getElementById('modal-amount').innerText = convertedInput;
+        modal.showModal();
+
     }
     else {
         alert('Please Provide Valid Money')
     }
     document.getElementById('quota-input').value = ''
 
+})
+document.getElementById('my_modal_1').addEventListener(' click', function () {
+    console.log('aa');
 })
