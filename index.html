@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instant Donate</title>
+    <link rel="stylesheet" href="style.css">
 
     <!-- google font cdn  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
     <!-- font awesome cdn  -->
     <script src="https://kit.fontawesome.com/7deee25e9f.js" crossorigin="anonymous"></script>
 
-    <!-- tailwind css & daisy khala cdn -->
+    <!-- tailwind css & daisy UI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,48 +37,49 @@
         }
     </script>
 
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="font-Lexend">
     <header class="header sticky top-0 ">
         <div id="navbar" class=" bg-background pr-4 pl-4">
             <nav class="container mx-auto flex justify-between items-center pt-6 pb-9 ">
-                <button id="blog-btn" class="btn bg-btnColor text-xl text-primary font-semibold border-none hover:bg-btnColor">Blog</button>
+                <button id="blog-btn"
+                    class="btn bg-btnColor text-xl text-primary font-semibold border-none hover:bg-btnColor"><a
+                        href="./blog.html">Blog</a></button>
                 <div class="flex  items-center gap-2">
                     <img class="w-10" src="assets/logo.png" alt="">
-                    <h1 class="text-2xl text-primary font-semibold xl:block lg:block md:block sm:block hidden">Donate Bangladesh</h1>
+                    <h1 class="text-2xl text-primary font-semibold xl:block lg:block md:block sm:block hidden">Donate
+                        Bangladesh</h1>
                 </div>
                 <div class="flex items-center gap-2">
                     <img src="assets/coin.png " alt="">
                     <div>
-                        <span id="balance" class="text-xl text-secondary font-medium"> 6000</span>
+                        <span id="balance" class="text-xl text-secondary font-medium">6000</span>
                         <span class="text-xl text-secondary font-medium">BDT</span>
                     </div>
                 </div>
             </nav>
         </div>
         <div id="donation-history-btn" class="flex justify-center gap-6 mt-7 pb-5 ">
-           <div  onclick="donationBtn()"> <button id="donation-btn"
-            class="btn bg-btnColor text-xl text-secondary font-semibold border-none hover:bg-btnColor ">Donation</button></div>
-           <div  onclick="historyBtn()"> <button id="history-btn"
-            class="btn  text-xl text-secondary font-semibold  hover:border-none hover:bg-btnColor bg-none">History</button></div>
-            <!-- <button id="donation-btn" onclick="donationBtn()"
-             class="btn bg-btnColor text-xl text-secondary font-semibold border-none">Donation</button>
-            <button id="history-btn" onclick="historyBtn()"
-             class="btn  text-xl text-secondary font-semibold border-gray-300 hover:border-none hover:bg-btnColor bg-none">History</button> -->
+            <div onclick="donationBtn()"> <button id="donation-btn"
+                    class="btn bg-btnColor text-xl text-secondary font-semibold border-none hover:bg-btnColor ">Donation</button>
+            </div>
+            <div onclick="historyBtn()"> <button id="history-btn"
+                    class="btn  text-xl text-secondary font-semibold  hover:border-none hover:bg-btnColor bg-none">History</button>
+            </div>
         </div>
 
     </header>
     <main>
         <!-- faq section start -->
-        
+
 
         <!-- faq section end -->
-         <!-- history -->
-          <section id="history-section" class="hidden container mx-auto mb-10 space-y-8 px-4">
+        <!-- history -->
+        <section id="history-section" class="hidden container mx-auto mb-10 space-y-8 px-4">
             <h3 id="default-text" class="text-3xl font-semibold text-error text-center">No Donation Provided</h3>
-          </section>
+        </section>
         <!-- Noakhali section -->
         <section id="noakhali-section"
             class="container mx-auto grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2   md:grid-cols-1 p-8 border-[1px] border-gray-300 rounded-2xl gap-8 items-center mb-8">
@@ -90,18 +92,20 @@
                 <button class="flex items-center gap-1 p-2   bg-amount rounded-lg">
                     <img class="w-5" src="assets/coin.png" alt="">
                     <div class="text-primary">
-                        <span id ="noakhali-amount">900</span>
+                        <span id="noakhali-amount">900</span>
                         <span>BDT</span>
                     </div>
                 </button>
-                <h2 id="noakhali-title" class="text-xl font-bold text-primary">Donated for Flood at Noakhali, Bangladesh</h2>
+                <h2 id="noakhali-title" class="text-xl font-bold text-primary">Donated for Flood at Noakhali, Bangladesh
+                </h2>
                 <p class="text-secondary font-light leading-7"> The recent floods in Noakhali have caused significant
                     damage to homes infrastructure. Your donation will help provide essential supplies and to those
                     affected by this disaster. Every contribution, big or small, makes difference. Please join us in
                     supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                <input id="noakhali-input" id="donation-input" class="input input-bordered w-full" type="text" placeholder="Wrtie Donation amount" name=""
-                    id="">
-                <button id="noakhali-btn" class="btn bg-btnColor text-xl text-primary font-semibold w-full">Donate Now</button>
+                <input id="noakhali-input" id="donation-input" class="input input-bordered w-full" type="text"
+                    placeholder="Wrtie Donation amount" name="" id="">
+                <button id="noakhali-btn" class="btn bg-btnColor text-xl text-primary font-semibold w-full">Donate
+                    Now</button>
             </div>
         </section>
         <!-- Feni section -->
@@ -120,16 +124,18 @@
                         <span>BDT</span>
                     </div>
                 </button>
-                <h2 id="feni-title" class="text-xl font-bold text-primary">Donated for Flood Relief in Feni,Bangladesh</h2>
+                <h2 id="feni-title" class="text-xl font-bold text-primary">Donated for Flood Relief in Feni,Bangladesh
+                </h2>
                 <p class="text-secondary font-light leading-7"> The recent floods in Feni have devastated local
                     communities, leading to severe disruption and loss. Your generous donation will help provide
                     immediate aid, including food, clean water, and medical supplies, to those affected by this
                     calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this
                     disaster. Every contribution counts towards making a real difference. Please consider donating today
                     to assist those in urgent need. </p>
-                <input id="feni-input" id="donation-input" class="input input-bordered w-full" type="text" placeholder="Wrtie Donation amount" name=""
-                    id="">
-                <button id="feni-btn" class="btn bg-btnColor text-xl text-primary font-semibold w-full border-none">Donate
+                <input id="feni-input" id="donation-input" class="input input-bordered w-full" type="text"
+                    placeholder="Wrtie Donation amount" name="" id="">
+                <button id="feni-btn"
+                    class="btn bg-btnColor text-xl text-primary font-semibold w-full border-none">Donate
                     Now</button>
             </div>
         </section>
@@ -149,20 +155,22 @@
                         <span>BDT</span>
                     </div>
                 </button>
-                <h2 id="quota-title" class="text-xl font-bold text-primary">Donated for Aid for Injured in the Quota Movement , Bangladesh</h2>
+                <h2 id="quota-title" class="text-xl font-bold text-primary">Donated for Aid for Injured in the Quota
+                    Movement , Bangladesh</h2>
                 <p class="text-secondary font-light leading-7">The recent Quota movement has resulted in numerous
                     injuries and significant hardship for many individuals. Your support is crucial in providing medical
                     assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help
                     ensure that injured individuals receive the care and support they need during this challenging time.
                     Every donation plays a vital role in alleviating their suffering and aiding in their recovery.
                     Please consider making a donation to support these brave individuals in their time of need. </p>
-                <input id="quota-input" id="donation-input" class="input input-bordered w-full" type="text" placeholder="Wrtie Donation amount" name=""
-                    id="">
-                <button id="quota-btn" class="btn bg-btnColor text-xl text-primary font-semibold w-full border-none">Donate
+                <input id="quota-input" id="donation-input" class="input input-bordered w-full" type="text"
+                    placeholder="Wrtie Donation amount" name="" id="">
+                <button id="quota-btn"
+                    class="btn bg-btnColor text-xl text-primary font-semibold w-full border-none">Donate
                     Now</button>
             </div>
         </section>
-         
+
 
         <!-- modal section  -->
 
@@ -170,24 +178,24 @@
         <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
         <dialog id="my_modal_1" class="modal">
             <div class="modal-box">
-               <div class="flex flex-col items-center space-y-5">
-                <h3 class="text-4xl text-primary font-bold ">Congrates!</h3>
-                <div class="flex items-center gap-2">
-                    <img src="assets/coin.png " alt="">
-                    <div>
-                        <span id="modal-amount" class="text-xl text-secondary font-medium"> 6000</span>
-                        <span class="text-xl text-secondary font-medium">BDT</span>
+                <div class="flex flex-col items-center space-y-5">
+                    <h3 class="text-4xl text-primary font-bold ">Congrates!</h3>
+                    <div class="flex items-center gap-2">
+                        <img src="assets/coin.png " alt="">
+                        <div>
+                            <span id="modal-amount" class="text-xl text-secondary font-medium"> 6000</span>
+                            <span class="text-xl text-secondary font-medium">BDT</span>
+                        </div>
+                    </div>
+                    <p class="py-4">You Have Donated for Humankind</p>
+                    <h3 class="font-bold text-lg">Successfully</h3>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn mx-auto ">Close Confirmation</button>
+                        </form>
                     </div>
                 </div>
-                <p class="py-4">You Have Donated for Humankind</p>
-                <h3 class="font-bold text-lg">Successfully</h3>
-                <div class="modal-action">
-                    <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn mx-auto ">Close Confirmation</button>
-                    </form>
-                </div>
-               </div>
             </div>
         </dialog>
 
@@ -196,7 +204,8 @@
     <footer id="footer" class="h-28 bg-background">
 
     </footer>
-    <script src="index.js"></script>
+    <script src="./js/blog.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
