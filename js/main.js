@@ -80,6 +80,7 @@ document.getElementById('quota-btn').addEventListener('click', function (event) 
         const quotaDonate = convertedDonates + convertedInput;
         document.getElementById('quota-amount').innerText = quotaDonate;
         document.getElementById('modal-amount').innerText = convertedInput;
+
         modal.showModal();
 
     }
@@ -91,4 +92,19 @@ document.getElementById('quota-btn').addEventListener('click', function (event) 
 })
 document.getElementById('my_modal_1').addEventListener(' click', function () {
     console.log('aa');
+})
+
+
+
+
+// history section 
+document.getElementById('history-btn').addEventListener('click', function (event) {
+    document.getElementById('history-section').classList.remove('hidden')
+    document.getElementById('main').classList.add('hidden');
+
+})
+
+document.getElementById('donation-btn').addEventListener('click', function (event) {
+    document.getElementById('history-section').classList.add('hidden')
+    document.getElementById('main').classList.remove('hidden')
 })
